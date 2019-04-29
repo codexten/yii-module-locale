@@ -18,7 +18,7 @@ use yii\helpers\Html;
         <div class="form-group">
 
             <?= Html::submitButton(
-                $model->isNewRecord ? Yii::t('backend', 'Create') : Yii::t('backend', 'Update'),
+                $model->isNewRecord ? Yii::t('codexten:module:locale', 'Create') : Yii::t('codexten:module:locale', 'Update'),
                 ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
 
         </div>

@@ -3,7 +3,9 @@
   "type": "library",
   "description": "Locale module for yii 2.0 or higher",
   "require": {
-    "symfony/intl": "*"
+    "codexten/yii-web": "^2.0",
+    "symfony/intl": "*",
+    "kartik-v/yii2-widget-select2": "@dev"
   },
   "autoload": {
     "psr-4": {

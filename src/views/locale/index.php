@@ -5,6 +5,7 @@ use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
+/* @var $searchModel  */
 
 $this->title = Yii::t('codexten:module:locale', 'Locales');
 ?>
@@ -15,7 +16,7 @@ $this->title = Yii::t('codexten:module:locale', 'Locales');
 
 <?php $page->beginContent('main-actions') ?>
 
-<?= $page->renderButton('create', '/business-category/create', ['class' => ['btn-success']]) ?>
+<?= $page->renderButton('create', 'create', ['class' => ['btn-success']]) ?>
 
 <?php $page->endContent() ?>
 
