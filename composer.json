@@ -2,6 +2,9 @@
   "name": "codexten/yii-module-locale",
   "type": "library",
   "description": "Locale module for yii 2.0 or higher",
+  "require": {
+    "symfony/intl": "*"
+  },
   "autoload": {
     "psr-4": {
       "codexten\\yii\\modules\\locale\\": "src"
