@@ -7,17 +7,14 @@
   },
   "autoload": {
     "psr-4": {
-      "codexten\\yii\\modules\\auth\\": "src"
+      "codexten\\yii\\modules\\locale\\": "src"
     }
-  },
-  "suggest": {
-    "codexten/yii-sms": "for sending SMS"
   },
   "extra": {
     "branch-alias": {
       "dev-master": "2.0.x-dev"
     },
-    "config-plugin": {
+    "sconfig-plugin": {
       "i18n": "src/config/i18n.php",
       "moduleAuth": "src/config/moduleAuth.php",
       "migrationNamespaces": "src/config/migrationNamespaces.php"
