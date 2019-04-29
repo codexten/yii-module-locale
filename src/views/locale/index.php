@@ -31,11 +31,11 @@ $this->title = Yii::t('codexten:module:locale', 'Locales');
             'label' => Yii::t('codexten:module:locale', 'Code'),
         ],
         'name',
-        [
-            'class' => 'yii\grid\ActionColumn',
-            'options' => ['style' => 'width: 5%'],
-            'template' => '{update} {delete}',
-        ],
+//        [
+//            'class' => 'yii\grid\ActionColumn',
+//            'options' => ['style' => 'width: 5%'],
+//            'template' => '{update} {delete}',
+//        ],
     ],
 ]); ?>
 
