@@ -5,7 +5,7 @@ use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-/* @var $searchModel  */
+/* @var $searchModel */
 
 $this->title = Yii::t('codexten:module:locale', 'Locales');
 ?>
@@ -26,7 +26,11 @@ $this->title = Yii::t('codexten:module:locale', 'Locales');
     'dataProvider' => $dataProvider,
     'filterModel' => $searchModel,
     'columns' => [
-        'code',
+        [
+            'attribute' => 'code',
+            'label' => Yii::t('codexten:module:locale', 'Code'),
+        ],
+        'name',
         [
             'class' => 'yii\grid\ActionColumn',
             'options' => ['style' => 'width: 5%'],

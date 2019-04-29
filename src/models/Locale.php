@@ -2,6 +2,7 @@
 
 namespace codexten\yii\modules\locale\models;
 
+use Symfony\Component\Intl\Locales;
 use Yii;
 use yii\helpers\Url;
 
@@ -36,6 +37,8 @@ class Locale extends \codexten\yii\db\ActiveRecord
         return [
             [['created_at', 'updated_at'], 'integer'],
             [['code'], 'string', 'max' => 50],
+            [['code'], 'required'],
+            [['code'], 'unique'],
         ];
     }
 
@@ -46,12 +49,19 @@ class Locale extends \codexten\yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('codexten:module:locale', 'ID'),
-            'code' => Yii::t('codexten:module:locale', 'Code'),
+            'code' => Yii::t('codexten:module:locale', 'Name'),
             'created_at' => Yii::t('codexten:module:locale', 'Created At'),
             'updated_at' => Yii::t('codexten:module:locale', 'Updated At'),
         ];
     }
 
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return Locales::getName($this->code);
+    }
 
     /**
      *{@inheritdoc}
