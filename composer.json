@@ -1,10 +1,7 @@
 {
   "name": "codexten/yii-module-locale",
   "type": "library",
-  "description": "Auth module for yii 2.0 or higher",
-  "require": {
-    "codexten/yii-user": "~2.0"
-  },
+  "description": "Locale module for yii 2.0 or higher",
   "autoload": {
     "psr-4": {
       "codexten\\yii\\modules\\locale\\": "src"
@@ -14,10 +11,9 @@
     "branch-alias": {
       "dev-master": "2.0.x-dev"
     },
-    "sconfig-plugin": {
-      "i18n": "src/config/i18n.php",
-      "moduleAuth": "src/config/moduleAuth.php",
-      "migrationNamespaces": "src/config/migrationNamespaces.php"
+    "config-plugin": {
+      "moduleLocale": "config/moduleLocale.php",
+      "migrationNamespaces": "config/migrationNamespaces.php"
     }
   }
 }

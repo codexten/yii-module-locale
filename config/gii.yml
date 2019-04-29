@@ -1,0 +1,13 @@
+params:
+  messageCategory: codexten:module:locale
+migration:
+  create_locale_table:
+    fields: |
+      code:string(50),
+      created_at:integer(11),
+      updated_at:integer(11)
+model:
+  locale:
+crud:
+  locale:
+    modelClass: codexten\yii\modules\locale\models\Locale
