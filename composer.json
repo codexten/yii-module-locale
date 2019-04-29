@@ -1,0 +1,26 @@
+{
+  "name": "codexten/yii-module-locale",
+  "type": "library",
+  "description": "Auth module for yii 2.0 or higher",
+  "require": {
+    "codexten/yii-user": "~2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "codexten\\yii\\modules\\auth\\": "src"
+    }
+  },
+  "suggest": {
+    "codexten/yii-sms": "for sending SMS"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0.x-dev"
+    },
+    "config-plugin": {
+      "i18n": "src/config/i18n.php",
+      "moduleAuth": "src/config/moduleAuth.php",
+      "migrationNamespaces": "src/config/migrationNamespaces.php"
+    }
+  }
+}
