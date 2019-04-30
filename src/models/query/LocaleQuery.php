@@ -2,21 +2,19 @@
 
 namespace codexten\yii\modules\locale\models\query;
 
+use codexten\yii\modules\locale\models\Locale;
+use yii\db\ActiveQuery;
+
 /**
  * This is the ActiveQuery class for [[\codexten\yii\modules\locale\models\Locale]].
  *
  * @see \codexten\yii\modules\locale\models\Locale
  */
-class LocaleQuery extends \yii\db\ActiveQuery
+class LocaleQuery extends ActiveQuery
 {
-    /*public function active()
-    {
-        return $this->andWhere('[[status]]=1');
-    }*/
-
     /**
      * {@inheritdoc}
-     * @return \codexten\yii\modules\locale\models\Locale[]|array
+     * @return Locale[]|array
      */
     public function all($db = null)
     {
@@ -25,7 +23,7 @@ class LocaleQuery extends \yii\db\ActiveQuery
 
     /**
      * {@inheritdoc}
-     * @return \codexten\yii\modules\locale\models\Locale|array|null
+     * @return Locale|array|null
      */
     public function one($db = null)
     {

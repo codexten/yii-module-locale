@@ -2,6 +2,8 @@
 
 namespace codexten\yii\modules\locale\models;
 
+use codexten\yii\db\ActiveRecord;
+use codexten\yii\modules\locale\models\query\LocaleQuery;
 use Symfony\Component\Intl\Locales;
 use Yii;
 use yii\helpers\Url;
@@ -16,7 +18,7 @@ use yii\helpers\Url;
  * @property int $created_at
  * @property int $updated_at
  */
-class Locale extends \codexten\yii\db\ActiveRecord
+class Locale extends ActiveRecord
 {
     //const STATUS_ACTIVE = 1;
     //const STATUS_INACTIVE = 0;
@@ -136,11 +138,11 @@ class Locale extends \codexten\yii\db\ActiveRecord
 
     /**
      * {@inheritdoc}
-     * @return \codexten\yii\modules\locale\models\query\LocaleQuery the active query used by this AR class.
+     * @return LocaleQuery the active query used by this AR class.
      */
     public static function find()
     {
-        return new \codexten\yii\modules\locale\models\query\LocaleQuery(get_called_class());
+        return new LocaleQuery(get_called_class());
     }
 
     ///**
