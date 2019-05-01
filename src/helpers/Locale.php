@@ -19,4 +19,9 @@ class Locale
     {
         return \codexten\yii\modules\locale\models\Locale::instance();
     }
+
+    public static function defaultLocale()
+    {
+        return 'en';
+    }
 }
