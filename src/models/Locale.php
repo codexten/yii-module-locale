@@ -17,6 +17,8 @@ use yii\helpers\Url;
  * @property string $code
  * @property int $created_at
  * @property int $updated_at
+ *
+ * @property string $name
  */
 class Locale extends ActiveRecord
 {
