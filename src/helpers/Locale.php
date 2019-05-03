@@ -2,8 +2,6 @@
 
 namespace codexten\yii\modules\locale\helpers;
 
-use yii\helpers\ArrayHelper;
-
 class Locale
 {
     /**
@@ -43,6 +41,6 @@ class Locale
 
     public static function defaultLocale()
     {
-        return 'en_US';
+        return 'en';
     }
 }
