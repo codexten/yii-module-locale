@@ -9,7 +9,17 @@ class Locale
      */
     public static function enabledLocales()
     {
-        return self::model()::find()->all();
+        $models = self::model()::find()->indexBy('code')->all();
+        if (isset($items[self::defaultLocale()])) {
+            $temp[self::defaultLocale()] = $models[self::defaultLocale()];
+            unset($models[self::defaultLocale()]);
+            foreach ($models as $code => $model) {
+                $temp[$code] = $model;
+            }
+            $models = $temp;
+        }
+
+        return $models;
     }
 
     public static function enabledLocaleNames()
@@ -19,15 +29,16 @@ class Locale
             $items[$model->code] = $model->name;
         }
 
-        if (isset($items[self::defaultLocale()])) {
-            $temp[self::defaultLocale()] = $items[self::defaultLocale()];
-            unset($items[self::defaultLocale()]);
-            foreach ($items as $code => $label) {
-                $temp[$code] = $label;
-            }
-            $items = $temp;
+        return $items;
+    }
 
+    public static function enabledLocaleNamesById()
+    {
+        $items = [];
+        foreach (self::enabledLocales() as $model) {
+            $items[$model->id] = $model->name;
         }
+
         return $items;
     }
 
