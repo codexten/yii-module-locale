@@ -22,7 +22,19 @@ class Locale
         return $models;
     }
 
+    /**
+     * @return  array
+     * @deprecated
+     */
     public static function enabledLocaleNames()
+    {
+        return self::enabledLocaleNamesByCode();
+    }
+
+    /**
+     * @return array
+     */
+    public static function enabledLocaleNamesByCode()
     {
         $items = [];
         foreach (self::enabledLocales() as $model) {
